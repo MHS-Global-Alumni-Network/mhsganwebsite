@@ -6,5 +6,9 @@
     {% url 'events' as event_url %}
     <span> {% if request.path == event_url %} Events {% else %} <a href="{{ event_url }}"> Events </a>{% endif %}</span>
     {% url 'contact' as contact_url %}
-    <span> {% if request.path == contact_url %} Contact {% else %} <a href="{{ contact_url }}"> Contact  </a>{% endif %}</span>
+    <span> {% if request.path == contact_url %} Contact {% else %} <a href="{{ contact_url }}"> Contact </a>{% endif %}</span>
+    {% url 'chapters' as chapters_url %}
+    <span> {% if request.path == chapters_url %} Chapters {% else %} <a href="{{ chapters_url }}"> Chapters </a>{% endif %}</span>
+    {% url 'committees' as committees_url %}
+    <span> {% if request.path == committees_url %} Committees {% else %} <a href="{{ committees_url }}"> Committees </a>{% endif %}</span>
 </div>
