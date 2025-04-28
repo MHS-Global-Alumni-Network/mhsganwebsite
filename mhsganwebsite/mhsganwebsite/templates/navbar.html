@@ -1,3 +1,32 @@
+{%  load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-lg-5">
+        <a class="navbar-brand" href="#!">
+             <img src="{% static 'images/MHSGAN_logo.png' %}" alt="Logo" class="navbar-logo">
+            <span class="navbar-text"> Manchester High School Global Alumni Network </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% url 'index' as index_url %}
+                <li class="nav-item"><a class="nav-link {% if request.path == index_url %} active {% endif %}" href="{{ index_url }}"> Home </a></li>
+                {% url 'about' as about_url %}
+                <li class="nav-item"><a class="nav-link {% if request.path == about_url %} active {% endif %} " href="{{ about_url }}"> About Us </a></li>
+                {% url 'events' as event_url %}
+                <li class="nav-item"><a class="nav-link {% if request.path == event_url %} active {% endif %}" href="{{ event_url }}"> Events </a></li>
+                {% url 'contact' as contact_url %}
+                <li class="nav-item"><a class="nav-link {% if request.path == contact_url %} active {% endif %}" href="{{ contact_url }}"> Contact Us </a></li>
+                {% url 'chapters' as chapters_url %}
+                <li class="nav-item"><a class="nav-link {% if request.path == chapters_url %} active {% endif %}" href="{{ chapters_url }}"> Chapters </a></li>
+                {% url 'committees' as committees_url %}
+                 <li class="nav-item"><a class="nav-link {% if request.path == committees_url %} active {% endif %}" href="{{ committees_url }}"> Committees </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--
 <div>
     {% url 'index' as index_url %}
     <span> {% if request.path == index_url %} Home {% else %}<a href="{{ index_url }}"> Home </a>{% endif %}</span>
@@ -11,4 +40,4 @@
     <span> {% if request.path == chapters_url %} Chapters {% else %} <a href="{{ chapters_url }}"> Chapters </a>{% endif %}</span>
     {% url 'committees' as committees_url %}
     <span> {% if request.path == committees_url %} Committees {% else %} <a href="{{ committees_url }}"> Committees </a>{% endif %}</span>
-</div>
+</div> -->

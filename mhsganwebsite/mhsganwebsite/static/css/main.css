@@ -1,0 +1,17 @@
+
+.navbar-logo {
+    display: inline-block;
+    height: 60px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .navbar-text {
+        display: none;
+    }
+}

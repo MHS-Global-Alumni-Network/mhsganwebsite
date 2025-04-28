@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.views.generic.base import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 
 from . import views
 
@@ -28,4 +29,4 @@ urlpatterns = [
     path('events', views.events, name="events"),
     path('chapters', views.chapters, name="chapters"),
     path('committees', views.committees, name="committees"),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
