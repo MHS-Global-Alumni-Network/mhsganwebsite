@@ -1,1 +1,2 @@
 -r prod.txt
+psycopg2-binary
