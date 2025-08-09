@@ -3,3 +3,4 @@ mhsganwebsite/db.sqlite3
 .idea/
 mhsganwebsite/mhsganwebsite/__pycache__/
 .DS_Store
+.env
