@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
+
 
 from . import views
+from chapters import views as chapters_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +30,9 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('contact', views.contact, name="contact"),
     path('events', views.events, name="events"),
-    path('chapters', views.chapters, name="chapters"),
+    path('chapters', chapters_views.chapters_list, name="chapters_list"),
+    path('chapters/create/', chapters_views.create_chapter, name='create_chapter'),
     path('committees', views.committees, name="committees"),
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
+    path('accounts/logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
