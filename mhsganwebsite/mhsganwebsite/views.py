@@ -12,8 +12,5 @@ def contact(request):
 def events(request):
     return render(request, 'events.html')
 
-def chapters(request):
-    return render(request, 'chapters.html')
-
 def committees(request):
     return render(request, 'committees.html')
