@@ -7,15 +7,15 @@ from .models import Chapter
 @login_required
 def create_chapter(request):
     if request.method == 'POST':
-        form = ChapterForm(request.POST)
-        if form.is_valid():
-            chapter = form.save(commit=False)
+        chapter_form = ChapterForm(request.POST)
+        if chapter_form.is_valid():
+            chapter = chapter_form.save(commit=False)
             chapter.created_by = request.user
             chapter.save()
             return redirect('chapters')
     else:
-        form = ChapterForm()
-    return render(request, 'chapters/create_chapter.html', {'form': form})
+        chapter_form = ChapterForm()
+    return render(request, 'chapters/create_chapter.html', {'form': chapter_form})
 
 
 def chapters_list(request):
