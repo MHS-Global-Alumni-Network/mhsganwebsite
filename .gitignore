@@ -4,3 +4,4 @@ mhsganwebsite/db.sqlite3
 mhsganwebsite/mhsganwebsite/__pycache__/
 .DS_Store
 .env
+__pycache__/
