@@ -9,8 +9,5 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def events(request):
-    return render(request, 'events.html')
-
 def committees(request):
     return render(request, 'committees.html')
