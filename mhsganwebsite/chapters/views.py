@@ -12,7 +12,7 @@ def create_chapter(request):
             chapter = chapter_form.save(commit=False)
             chapter.created_by = request.user
             chapter.save()
-            return redirect('chapters')
+            return redirect('chapters_list')
     else:
         chapter_form = ChapterForm()
     return render(request, 'chapters/create_chapter.html', {'form': chapter_form})
