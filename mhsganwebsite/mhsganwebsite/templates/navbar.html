@@ -13,12 +13,14 @@
                 <li class="nav-item"><a class="nav-link {% if request.path == index_url %} active {% endif %}" href="{{ index_url }}"> Home </a></li>
                 {% url 'about' as about_url %}
                 <li class="nav-item"><a class="nav-link {% if request.path == about_url %} active {% endif %} " href="{{ about_url }}"> About Us </a></li>
-                {% url 'events' as event_url %}
+                {% url 'events_list' as event_url %}
                 <li class="nav-item"><a class="nav-link {% if request.path == event_url %} active {% endif %}" href="{{ event_url }}"> Events </a></li>
                 {% url 'contact' as contact_url %}
                 <li class="nav-item"><a class="nav-link {% if request.path == contact_url %} active {% endif %}" href="{{ contact_url }}"> Contact Us </a></li>
                 {% url 'chapters_list' as chapters_url %}
                 <li class="nav-item"><a class="nav-link {% if request.path == chapters_url %} active {% endif %}" href="{{ chapters_url }}"> Chapters </a></li>
+                {% url 'posts_list' as posts_url %}
+                <li class="nav-item"><a class="nav-link {% if request.path == posts_url %} active {% endif %}" href="{{ posts_url }}"> Posts </a></li>
                 {% url 'committees' as committees_url %}
                  <li class="nav-item"><a class="nav-link {% if request.path == committees_url %} active {% endif %}" href="{{ committees_url }}"> Committees </a></li>
             </ul>
