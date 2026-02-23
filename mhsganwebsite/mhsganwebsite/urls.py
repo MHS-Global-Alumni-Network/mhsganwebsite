@@ -25,19 +25,22 @@ from . import views
 from chapters import views as chapters_views
 from events import views as events_views
 from posts import views as posts_views
+from subscribers import views as subscribers_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
-    path('about', views.about, name="about"),
-    path('contact', views.contact, name="contact"),
-    path('chapters', chapters_views.chapters_list, name="chapters_list"),
+    path('about/', views.about, name="about"),
+    path('contact/', views.contact, name="contact"),
+    path('chapters/', chapters_views.chapters_list, name="chapters_list"),
     path('chapters/create/', chapters_views.create_chapter, name='create_chapter'),
-    path('events', events_views.events_list, name="events_list"),
+    path('events/', events_views.events_list, name="events_list"),
     path('events/create/', events_views.create_event, name='create_event'),
-    path('posts', posts_views.posts_list, name="posts_list"),
+    path('posts/', posts_views.posts_list, name="posts_list"),
     path('posts/create/', posts_views.create_post, name='create_post'),
-    path('committees', views.committees, name="committees"),
+    path('committees/', views.committees, name="committees"),
     path('accounts/login/', auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('subscribe/', subscribers_views.create_subscriber, name='create_subscriber'),
+    path('subscription_confirmation/', subscribers_views.confirm_subscription, name='confirm_subscription')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
