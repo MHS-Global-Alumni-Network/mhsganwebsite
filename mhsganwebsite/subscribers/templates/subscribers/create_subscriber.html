@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Join our Mailing List</h2>
+    <p>Stay updated with MHSGAN news and scholarships.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+{% endblock %}

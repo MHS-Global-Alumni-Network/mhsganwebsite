@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    <h1>🎉 You're on the list!</h1>
+    <p>Thanks for subscribing to the MHSGAN newsletter.</p>
+    <p>We'll keep you updated on the latest alumni news.</p>
+
+    <hr>
+
+    <p>While you're here, why not check out:</p>
+    <ul style="list-style: none; padding: 0;">
+        <li><a href="{% url 'posts_list' %}">Latest Posts</a></li>
+
+        <li><a href="{% url 'events_list' %}">Events</a></li>
+
+        <li><a href="{% url 'index' %}">Return Home</a></li>
+    </ul>
+</div>
+{% endblock %}
