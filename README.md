@@ -7,7 +7,8 @@ To start project:
 
 
 To Create a New Model
-1) Add the new model in the models.py file:
+1) Run the command `python manage.py startapp <new_app_name>`
+2) Add the new model in the models.py file:
 ```
 from django.db import models
 class NewModel(models.Model):
@@ -15,11 +16,11 @@ class NewModel(models.Model):
     title = models.CharField(max_length=200)
 ```
 
-2) Run `python manage.py makemigrations` to create a migration file.
+3) Run `python manage.py makemigrations` to create a migration file.
 
-3) Run `python manage.py migrate` to apply the changes and create the new table in the database.
+4) Run `python manage.py migrate` to apply the changes and create the new table in the database.
 
-4) To manage the new model in the Django admin panel, add it to the app's admin.py file.
+5) To manage the new model in the Django admin panel, add it to the app's admin.py file.
 
 ```
 from django.contrib import admin
