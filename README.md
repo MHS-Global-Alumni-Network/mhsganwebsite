@@ -14,6 +14,9 @@ from django.db import models
 class NewModel(models.Model):
     # Add your fields here
     title = models.CharField(max_length=200)
+    
+    def __str__(self):
+        return self.title
 ```
 
 3) Run `python manage.py makemigrations` to create a migration file.
