@@ -31,3 +31,5 @@ from .models import NewModel
 
 admin.site.register(NewModel)
 ```
+
+6) Add the new app to the `settings.py`
