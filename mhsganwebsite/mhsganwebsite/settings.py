@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'chapters',
     'events',
-    'posts'
+    'posts',
+    'scholarships'
 ]
 
 MIDDLEWARE = [
