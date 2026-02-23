@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'chapters',
     'events',
     'posts',
-    'scholarships'
+    'scholarships',
+    'subscribers'
 ]
 
 MIDDLEWARE = [
